@@ -1,0 +1,55 @@
+#--- System & IDEs ---
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+#--- Dependencies (Node & Python) ---
+
+node_modules/
+frontend/node_modules/
+backend/venv/
+backend/rbac_env/
+backend/env/
+
+#--- Frontend (Next.js Build) ---
+
+frontend/.next/
+frontend/out/
+frontend/build/
+.vercel
+
+#--- Backend (Python Artifacts) ---
+
+backend/pycache/
+backend/*.pyc
+backend/.pytest_cache/
+backend/.coverage
+
+#--- Environment Variables (Secrets) ---
+
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+
+#--- Database ---
+
+Critical: Do not upload the SQLite binary file
+
+backend/database.db
+
+#--- User Uploads ---
+
+backend/static/*
+!backend/static/.gitkeep
+
+#--- Logs ---
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
