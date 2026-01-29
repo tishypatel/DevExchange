@@ -48,56 +48,57 @@
 
 1. Clone the repository
 
-git clone [Link](https://github.com/tishypatel/devexchange.git)
-cd devexchange
+- git clone [Link](https://github.com/tishypatel/devexchange.git)
+
+- cd devexchange
 
 2. Backend Setup
 
-cd backend
+- cd backend
 
 # Create virtual environment
 
-python -m venv rbac_env
-source rbac_env/bin/activate # Windows: rbac_env\Scripts\activate
+- python -m venv rbac_env
+- source rbac_env/bin/activate # Windows: rbac_env\Scripts\activate
 
 # Install dependencies
 
-pip install fastapi uvicorn sqlmodel python-jose[cryptography] passlib python-multipart faker
+- pip install fastapi uvicorn sqlmodel python-jose[cryptography] passlib python-multipart faker
 
 # Seed Database (Creates 100+ dummy tickets & users)
 
-python seed_data.py
+- python seed_data.py
 
 # Run Server
 
-uvicorn main:app --reload
+- uvicorn main:app --reload
 
-Backend runs on: http://localhost:8000
+- Backend runs on: http://localhost:8000
 
 3. Frontend Setup
 
-Open a new terminal.
+- Open a new terminal.
 
-cd frontend
+- cd frontend
 
 # Install packages
 
-npm install
+- npm install
 
 # Run Dev Server
 
-npm run dev
+- npm run dev
 
-Frontend runs on: http://localhost:3000
+- Frontend runs on: http://localhost:3000
 
 🔑 Default Credentials (Seeded)
 
-Admin: boss / 123
+- Admin: boss / 123
 
-User: intern / 123
+- User: intern / 123
 
-📸 Screenshots
 
 <img width="1920" height="958" alt="image" src="https://github.com/user-attachments/assets/3c533c2f-5849-4d2e-a1df-e27b8f604319" />
+
 
 Made with 💛 in India.
