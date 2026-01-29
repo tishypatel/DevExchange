@@ -1,4 +1,4 @@
-🛡️ DevExchange - Engineering Knowledge Platform
+# 🛡️ DevExchange - Engineering Knowledge Platform
 
 DevExchange is an internal ticketing and knowledge-sharing platform designed for engineering teams. It replaces chaotic Slack threads with structured, searchable discussions, featuring Role-Based Access Control (RBAC) and real-time collaboration.
 
