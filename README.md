@@ -1,104 +1,88 @@
 # 🛡️ DevExchange - Engineering Knowledge Platform
 
-- DevExchange is an internal ticketing and knowledge-sharing platform designed for engineering teams. It replaces chaotic Slack threads with structured, searchable discussions, featuring Role-Based Access Control (RBAC) and real-time collaboration.
+DevExchange is an internal ticketing and knowledge-sharing platform designed for engineering teams. It replaces chaotic Slack threads with structured, searchable discussions, featuring **Role-Based Access Control (RBAC)** and real-time collaboration.
 
-🚀 Features
+---
 
-🔐 Security & RBAC
+## 🚀 Features
 
-- Role-Based Access: Distinct permissions for Admin, Manager, and User.
-  
-- JWT Authentication: Secure login session management.
-  
-- Admin Console: Bulk user management and system oversight.
+### 🔐 Security & RBAC
+* **Role-Based Access:** Distinct permissions for Admin, Manager, and User.
+* **JWT Authentication:** Secure login session management.
+* **Admin Console:** Bulk user management and system oversight.
 
-📋 Ticket Management (Kanban)
+### 📋 Ticket Management (Kanban)
+* **Interactive Kanban Board:** Filter-based board views with smooth animations.
+* **Filtering & Sorting:** Filter by Priority (Critical, High, Medium) or Status.
+* **Rich Statuses:** Track issues from "Open" to "Solved".
 
-- Interactive Kanban Board: Filter-based board views with smooth animations.
-  
-- Filtering & Sorting: Filter by Priority (Critical, High, Medium) or Status.
-  
-- Rich Statuses: Track issues from "Open" to "Solved".
+### 💬 Real-Time Collaboration
+* **Live Threads:** Comments update instantly across all open windows using WebSockets.
+* **Notification Center:** Get alerted immediately when someone replies to your ticket.
+* **File Attachments:** Upload screenshots to provide context.
 
-💬 Real-Time Collaboration
+### 🎨 Modern UI/UX
+* **Dark Mode:** Fully supported system-wide dark mode with a dedicated toggle.
+* **Responsive Design:** Works on Mobile, Tablet, and Desktop.
+* **Animations:** Smooth layout transitions using Framer Motion.
 
-- Live Threads: Comments update instantly across all open windows using WebSockets.
-  
-- Notification Center: Get alerted immediately when someone replies to your ticket.
-  
-- File Attachments: Upload screenshots to provide context.
+---
 
-🎨 Modern UI/UX
+## 🛠️ Tech Stack
 
-- Dark Mode: Fully supported system-wide dark mode with a dedicated toggle.
-  
-- Responsive Design: Works on Mobile, Tablet, and Desktop.
-  
-- Animations: Smooth layout transitions using Framer Motion.
+* **Frontend:** Next.js 14 (App Router), Tailwind CSS v4, Framer Motion, Lucide Icons.
+* **Backend:** FastAPI, SQLModel (SQLite), WebSockets, Python-Jose.
+* **DevOps:** Docker ready (optional).
 
-🛠️ Tech Stack
+---
 
-- Frontend: Next.js 14 (App Router), Tailwind CSS v4, Framer Motion, Lucide Icons.
-  
-- Backend: FastAPI, SQLModel (SQLite), WebSockets, Python-Jose.
-  
-- DevOps: Docker ready (optional).
+## ⚡ Getting Started
 
-⚡ Getting Started
+### 1. Clone the repository
+- `git clone https://github.com/tishypatel/devexchange.git`
+- `cd devexchange`
 
-1. Clone the repository
+### 2. Backend Setup
+- `cd backend`
 
-- git clone [Link](https://github.com/tishypatel/devexchange.git)
+**# Create virtual environment**
+- `python -m venv rbac_env`
+- `source rbac_env/bin/activate # Windows: rbac_env\Scripts\activate`
 
-- cd devexchange
+**# Install dependencies**
+- `pip install fastapi uvicorn sqlmodel python-jose[cryptography] passlib python-multipart faker`
 
-2. Backend Setup
+**# Seed Database (Creates 100+ dummy tickets & users)**
+- `python seed_data.py`
 
-- cd backend
+**# Run Server**
+- `uvicorn main:app --reload`
+- **Backend runs on:** http://localhost:8000
 
-# Create virtual environment
-
-- python -m venv rbac_env
-- source rbac_env/bin/activate # Windows: rbac_env\Scripts\activate
-
-# Install dependencies
-
-- pip install fastapi uvicorn sqlmodel python-jose[cryptography] passlib python-multipart faker
-
-# Seed Database (Creates 100+ dummy tickets & users)
-
-- python seed_data.py
-
-# Run Server
-
-- uvicorn main:app --reload
-
-- Backend runs on: http://localhost:8000
-
-3. Frontend Setup
-
+### 3. Frontend Setup
 - Open a new terminal.
+- `cd frontend`
 
-- cd frontend
+**# Install packages**
+- `npm install`
 
-# Install packages
+**# Run Dev Server**
+- `npm run dev`
+- **Frontend runs on:** http://localhost:3000
 
-- npm install
+---
 
-# Run Dev Server
+## 🔑 Default Credentials (Seeded)
 
-- npm run dev
+* **Admin:** `boss` / `123`
+* **User:** `intern` / `123`
 
-- Frontend runs on: http://localhost:3000
+---
 
-🔑 Default Credentials (Seeded)
-
-- Admin: boss / 123
-
-- User: intern / 123
-
+## 📸 Preview
 
 <img width="1920" height="958" alt="image" src="https://github.com/user-attachments/assets/3c533c2f-5849-4d2e-a1df-e27b8f604319" />
 
+---
 
-Made with 💛 in India.
+**Made with 💛 in India.**
